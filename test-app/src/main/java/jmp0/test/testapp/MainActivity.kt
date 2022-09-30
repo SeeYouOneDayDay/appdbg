@@ -1,20 +1,17 @@
 package jmp0.test.testapp
 
-import android.support.v7.app.AppCompatActivity
+import android.app.Activity
 import android.os.Bundle
-import android.os.MessageQueue
-import android.provider.Settings
-import android.util.Log
 import android.widget.TextView
-import jmp0.test.testapp.net.TestNetWork
-import jmp0.test.testapp.reflection.TestReflection
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        var tv =TextView(MainActivity@this)
+        tv.setText("hello")
+        setContentView(tv)
 //        TestReflection.testAll()
-        DebugTest(111,"22").testAll(1);
+        DebugTest(111, "22").testAll(1);
 //        SharedPreferencesTest(this).testAll()
 //        TestContext(this).testAll()
 //        TestAES()
